@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score-container">
+                <span>Score: </span>
+                <span id="score">0</span>
+            </div>
+            <div class="level-container">
+                <span>Level: </span>
+                <span id="level">1</span>
+            </div>
+        </div>
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+        </div>
+        <div class="mobile-controls">
+            <div class="mobile-row">
+                <button class="mobile-btn" id="rotate-left">↺</button>
+                <button class="mobile-btn" id="rotate-right">↻</button>
+            </div>
+            <div class="mobile-row">
+                <button class="mobile-btn" id="move-left">←</button>
+                <button class="mobile-btn" id="move-right">→</button>
+                <button class="mobile-btn" id="soft-drop">↓</button>
+                <button class="mobile-btn" id="hard-drop">▼</button>
+            </div>
+        </div>
+        <div class="instructions">
+            <h3>Controls:</h3>
+            <p>← → : Move left/right</p>
+            <p>↑ : Rotate anticlockwise</p>
+            <p>Z X : Rotate</p>
+            <p>↓ : Soft drop</p>
+            <p>Space : Hard drop</p>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html> 

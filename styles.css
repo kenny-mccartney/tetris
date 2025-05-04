@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a;
+    font-family: Arial, sans-serif;
+    color: white;
+    touch-action: manipulation;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.2rem;
+}
+
+canvas {
+    border: 2px solid #333;
+    background: #000;
+    max-width: 100%;
+    height: auto;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.mobile-controls {
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    gap: 10px;
+}
+
+.mobile-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.mobile-btn {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.5rem;
+    min-width: 60px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-btn:active {
+    background: #45a049;
+    transform: scale(0.95);
+}
+
+.instructions {
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.instructions h3 {
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+@media (max-width: 768px) {
+    .mobile-controls {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .instructions {
+        display: none;
+    }
+    
+    .game-container {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .game-header {
+        font-size: 1rem;
+    }
+    
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .mobile-btn {
+        padding: 12px;
+        font-size: 1.2rem;
+        min-width: 50px;
+    }
+} 
